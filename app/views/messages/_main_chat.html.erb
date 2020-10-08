@@ -1,6 +1,8 @@
 <div class ="chat-header">
   <div class="right-header">
-    <div class="header-title">hogefuga</div>
+    <div class="header-title">
+     <%= @room.name %>
+    </div>
   </div>
   <div class="left-header">
     <div class="header-button">
@@ -8,30 +10,11 @@
     </div>
   </div>
 </div>
-<div class ="messages">
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        Tom
-      </div>
-      <div class="message-date">
-        2020/3/31(WED) 12:43:30
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">おはよう</div>
-    </div>
-  </div>
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">Jimihen</div>
-      <div class="message-date">2020/3/31(WED) 19:00:30</div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">こんばんは</div>
-    </div>
-  </div>
+
+<div class="messages">
+  <%= render partial: 'message', collection: @messages %>
 </div>
+
 <%# <div class ="form">
   <div class="form-input">
     <input class="form-message" placeholder= "type a message">
